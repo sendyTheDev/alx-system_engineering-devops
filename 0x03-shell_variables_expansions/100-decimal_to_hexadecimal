@@ -1,0 +1,2 @@
+#!/bin/nash
+printf "%x\n" $DECIMAL
