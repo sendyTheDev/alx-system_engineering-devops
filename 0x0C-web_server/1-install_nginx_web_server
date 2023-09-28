@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# Install NGINX
+
+sudo apt install -y nginx
+sudo apt update
+
+sudo mkdir -p /var/www/html
+
+sudo touch /var/www/html/index
+sudo touch /var/www/html/index.html
+sudo touch /var/www/html/index.htm
+sudo touch /var/www/html/index.nginx-debian.html
+
+# in order to edit the file.
+sudo chown -R "$USER":"$USER" /var/www/html/index
+sudo chown -R "$USER":"$USER" /var/www/html/index.html
+sudo chown -R "$USER":"$USER" /var/www/html/index.htm
+sudo chown -R "$USER":"$USER" /var/www/html/index.nginx-debian.html
+
+echo "Hello World!" > /var/www/html/index
+echo "Hello World!" > /var/www/html/index.html
+echo "Hello World!" > /var/www/html/index.htm
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+
+sudo ufw allow 'Nginx HTTP'
+
+# start nginx server
+sudo service nginx restart

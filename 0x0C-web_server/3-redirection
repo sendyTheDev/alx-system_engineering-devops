@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Set up a permanent redirect
+
+sudo apt update
+sudo apt install -y nginx
+
+sudo sed -i "53s/.*/location \/redirect_me {\n\treturn 301 http:\/\/github.com\/\;\n}/" /etc/nginx/sites-available/default
+
+# start nginx server
+sudo service nginx restart
