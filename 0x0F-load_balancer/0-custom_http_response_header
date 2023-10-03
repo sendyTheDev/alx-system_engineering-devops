@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# configure a brand new server with nginx with redirection
+# error page and X-Served by server name
+
+# updates the package list & install Nginx
