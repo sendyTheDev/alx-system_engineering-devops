@@ -13,8 +13,8 @@ echo -e "frontend myfrontend
 
 backend web_servers
         balance roundrobin
-        server 244023-web-01 18.234.105.35 check
-        server 244023-web-02 18.210.20.138 check
+        server 246056-web-01 107.23.90.175 check
+        server 246056-web-02 100.25.21.55 check
 ' >> /etc/haproxy/haproxy.cfg
 
 # enable haproxy to be started by init script
